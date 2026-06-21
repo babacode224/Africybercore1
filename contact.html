@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Get in touch — AfriCyberCore</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="assets/css/concept.css" rel="stylesheet"/>
+<script>
+  tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'] } } } };
+</script>
+<style> body { font-family: 'Inter', ui-sans-serif, system-ui, sans-serif; } </style>
+</head>
+<body class="relative bg-white text-neutral-900 font-sans selection:bg-[#EAECE9] selection:text-[#1C2E1E] antialiased overflow-x-hidden flex flex-col lg:block lg:min-h-screen">
+
+<!-- ===== Concept Navbar (transparent, AfriCyberCore content) ===== -->
+<header class="fixed top-0 inset-x-0 z-20 px-5 sm:px-8 py-4 sm:py-5 flex flex-row justify-between items-center bg-transparent font-inter">
+<a class="flex flex-row items-center gap-2" href="index.html">
+<span class="text-[21px] sm:text-[26px] tracking-tight text-black font-semibold select-none">AfriCyberCore</span>
+<span class="text-[20px] sm:text-[24px] text-[#1C2E1E] select-none font-medium leading-none">&#10033;</span>
+</a>
+<nav class="hidden lg:flex items-center gap-6 text-[17px] text-black">
+<a class="hover:opacity-60 transition-opacity" href="index.html">Home</a>
+<a class="hover:opacity-60 transition-opacity" href="about.html">About</a>
+<a class="hover:opacity-60 transition-opacity" href="services.html">Services</a>
+<a class="hover:opacity-60 transition-opacity" href="products.html">Products</a>
+<a class="hover:opacity-60 transition-opacity" href="consulting.html">Consulting</a>
+<a class="hover:opacity-60 transition-opacity" href="contact.html">Contact</a>
+</nav>
+<div class="flex items-center gap-5">
+<a class="hidden lg:inline-flex items-center bg-[#1C2E1E] text-white text-[15px] font-medium px-5 py-2.5 rounded-full hover:bg-[#15241a] transition-colors" href="consulting.html">Book a Consultation</a>
+<button id="hamburger" type="button" aria-label="Open menu" class="lg:hidden flex flex-col justify-center items-center gap-[5px] w-8 h-8">
+<span class="block w-6 h-[2px] bg-black transition-all duration-300 origin-center"></span>
+<span class="block w-6 h-[2px] bg-black transition-all duration-300 origin-center"></span>
+<span class="block w-6 h-[2px] bg-black transition-all duration-300 origin-center"></span>
+</button>
+</div>
+</header>
+<!-- Mobile menu overlay -->
+<div id="mobile-menu" class="lg:hidden fixed inset-0 z-[15] bg-white/95 backdrop-blur-sm flex flex-col items-center justify-center gap-7 text-3xl text-black opacity-0 pointer-events-none transition-opacity duration-300 font-inter">
+<a class="hover:opacity-60 transition-opacity" href="index.html">Home</a>
+<a class="hover:opacity-60 transition-opacity" href="about.html">About</a>
+<a class="hover:opacity-60 transition-opacity" href="services.html">Services</a>
+<a class="hover:opacity-60 transition-opacity" href="products.html">Products</a>
+<a class="hover:opacity-60 transition-opacity" href="consulting.html">Consulting</a>
+<a class="hover:opacity-60 transition-opacity" href="contact.html">Contact</a>
+<a class="mt-2 bg-[#1C2E1E] text-white text-lg px-6 py-3 rounded-full" href="consulting.html">Book a Consultation</a>
+</div>
+
+<!-- ===== Background video ===== -->
+<div class="order-last lg:order-none relative lg:absolute lg:inset-0 lg:z-0 overflow-hidden pointer-events-none w-full aspect-square md:aspect-video lg:aspect-auto lg:h-full bg-neutral-50 lg:bg-transparent">
+<video id="bg-video" muted playsinline preload="auto" class="w-full h-full object-cover object-right lg:object-right-bottom">
+<source src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260601_110537_3a579fa0-7bbc-4d94-9d25-0e816c7840f5.mp4" type="video/mp4"/>
+</video>
+</div>
+
+<!-- ===== Content layer ===== -->
+<div class="relative z-10 flex flex-col order-first lg:order-none w-full bg-white lg:bg-transparent pb-8 lg:pb-0 lg:min-h-screen">
+<main class="w-full max-w-7xl mx-auto px-6 py-12 lg:pt-28 flex-1 flex flex-col justify-center">
+<!-- Headline (typewriter) -->
+<div class="drop-in">
+<h1 data-typewriter data-text="we'd love to&#10;hear from you!" data-speed="38" data-delay="600" class="text-5xl md:text-6xl lg:text-[76px] font-normal tracking-tight text-black leading-[1.08] mb-8 select-none w-full whitespace-pre-wrap"></h1>
+</div>
+<!-- Secondary description -->
+<div class="drop-in" style="animation-delay: 0.1s;">
+<p class="text-lg md:text-xl text-[#5A635A] leading-relaxed font-normal mb-14 max-w-2xl">Whether you have questions, feedback, <br/> drop us a message and we'll get back to you as soon as possible.</p>
+</div>
+<!-- Service pills -->
+<div class="drop-in" style="animation-delay: 0.2s;">
+<h2 class="text-2xl font-medium tracking-tight mb-2">What sort of service?</h2>
+<p class="opacity-85 text-[#738273] mb-8">Select all that apply</p>
+<div id="pills" class="flex flex-wrap gap-3">
+<button type="button" data-service="Cybersecurity Consulting" class="pill inline-flex items-center gap-2 px-5 py-3 rounded-full text-base font-medium border transition-all bg-white text-[#1C2E1E] border-[#F1F3F1] hover:bg-[#F1F3F1]/55">
+<span class="check hidden items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+                        Cybersecurity Consulting
+                    </button>
+<button type="button" data-service="Business Automation" class="pill inline-flex items-center gap-2 px-5 py-3 rounded-full text-base font-medium border transition-all bg-white text-[#1C2E1E] border-[#F1F3F1] hover:bg-[#F1F3F1]/55">
+<span class="check hidden items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+                        Business Automation
+                    </button>
+<button type="button" data-service="No-Code Web Dev" class="pill inline-flex items-center gap-2 px-5 py-3 rounded-full text-base font-medium border transition-all bg-white text-[#1C2E1E] border-[#F1F3F1] hover:bg-[#F1F3F1]/55">
+<span class="check hidden items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+                        No-Code Web Dev
+                    </button>
+<button type="button" data-service="AI Innovations" class="pill inline-flex items-center gap-2 px-5 py-3 rounded-full text-base font-medium border transition-all bg-white text-[#1C2E1E] border-[#F1F3F1] hover:bg-[#F1F3F1]/55">
+<span class="check hidden items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+                        AI Innovations
+                    </button>
+<button type="button" data-service="Training Academy" class="pill inline-flex items-center gap-2 px-5 py-3 rounded-full text-base font-medium border transition-all bg-white text-[#1C2E1E] border-[#F1F3F1] hover:bg-[#F1F3F1]/55">
+<span class="check hidden items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+                        Training Academy
+                    </button>
+</div>
+<div id="feedback" class="mt-8">
+<p class="italic text-xs" style="opacity: 0.5;">Please click to select services above.</p>
+</div>
+</div>
+</main>
+</div>
+
+<script src="assets/js/concept.js"></script>
+</body>
+</html>

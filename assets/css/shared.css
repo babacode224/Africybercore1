@@ -1,0 +1,127 @@
+/* AfriCyberCore — shared styles (union of all page helpers from the Stitch export) */
+
+body {
+  background-color: #101415;
+  color: #e0e3e5;
+  overflow-x: hidden;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  line-height: 1;
+  vertical-align: middle;
+  font-feature-settings: 'liga';
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---- Grid / pattern backgrounds ---- */
+.cyber-grid {
+  background-image:
+    linear-gradient(to right, rgba(35, 53, 84, 0.2) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(35, 53, 84, 0.2) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+.product-grid-pattern {
+  background-image: radial-gradient(#233554 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* ---- Hover glows ---- */
+.glow-hover:hover {
+  box-shadow: 0 0 15px rgba(123, 208, 255, 0.3);
+  border-color: #7bd0ff;
+}
+.hover-glow:hover {
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.2);
+  border-color: #7bd0ff;
+}
+.cyber-glow-hover:hover {
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.2);
+  border-color: #7bd0ff;
+}
+.cyber-border-glow {
+  border: 1px solid #233554;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.cyber-border-glow:hover {
+  border-color: #7bd0ff;
+  box-shadow: 0 0 15px rgba(123, 208, 255, 0.2);
+}
+
+/* ---- Glass surfaces ---- */
+.glass-nav {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-panel {
+  background: rgba(17, 34, 64, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid #233554;
+}
+.glass-card {
+  background: rgba(17, 34, 64, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(56, 189, 248, 0.1);
+}
+
+/* ---- Hero / gradients / text ---- */
+.hero-gradient {
+  background: radial-gradient(circle at 50% 50%, rgba(10, 25, 47, 1) 0%, rgba(16, 20, 21, 1) 100%);
+}
+.text-glow {
+  text-shadow: 0 0 10px rgba(123, 208, 255, 0.5);
+}
+
+/* ---- Cards ---- */
+.pillar-card {
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.pillar-card:hover {
+  transform: translateY(-8px);
+}
+
+/* ---- Reveal on scroll ---- */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease-out;
+}
+.reveal-on-scroll.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+.timeline-line {
+  background: linear-gradient(to bottom, transparent, #7bd0ff, transparent);
+}
+
+/* ---- Animations ---- */
+@keyframes pulse-soft {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.7; }
+}
+.animate-pulse-soft { animation: pulse-soft 4s infinite ease-in-out; }
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+.animate-float { animation: float 6s ease-in-out infinite; }
+
+/* ---- Hero slide-up fade (borrowed concept) ---- */
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.fade-up { animation: fade-up 0.8s ease-out both; }
+.fade-up-1 { animation: fade-up 0.8s ease-out 0.15s both; }
+.fade-up-2 { animation: fade-up 0.8s ease-out 0.30s both; }
+.fade-up-3 { animation: fade-up 0.8s ease-out 0.45s both; }
+
+/* ---- Typewriter cursor (contact concept) ---- */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+.animate-blink { animation: blink 1s step-end infinite; }
