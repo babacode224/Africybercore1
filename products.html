@@ -23,9 +23,25 @@
 <a class="text-on-surface-variant font-medium hover:text-secondary transition-colors duration-300" href="consulting.html">Consulting</a>
 <a class="text-on-surface-variant font-medium hover:text-secondary transition-colors duration-300" href="contact.html">Contact</a>
 </div>
-<a class="bg-tertiary text-on-tertiary-fixed px-6 py-3 rounded-lg font-button-text text-button-text hover:scale-105 active:scale-95 transition-all shadow-lg shadow-tertiary/10" href="consulting.html">Book a Consultation</a>
+<div class="flex items-center gap-3">
+<a class="hidden sm:inline-flex bg-tertiary text-on-tertiary-fixed px-6 py-3 rounded-lg font-button-text text-button-text hover:scale-105 active:scale-95 transition-all shadow-lg shadow-tertiary/10" href="consulting.html">Book a Consultation</a>
+<button id="acc-hamburger" type="button" aria-label="Open menu" class="md:hidden flex flex-col justify-center items-center gap-[5px] w-9 h-9">
+<span class="block w-5 h-[2px] bg-on-surface transition-all duration-300 origin-center"></span>
+<span class="block w-5 h-[2px] bg-on-surface transition-all duration-300 origin-center"></span>
+<span class="block w-5 h-[2px] bg-on-surface transition-all duration-300 origin-center"></span>
+</button>
+</div>
 </nav>
 </header>
+<div id="acc-mobile-menu" class="md:hidden fixed inset-0 z-[45] bg-background/95 backdrop-blur-sm flex flex-col items-center justify-center gap-6 text-2xl opacity-0 pointer-events-none transition-opacity duration-300">
+<a class="text-on-surface hover:text-secondary transition-colors" href="index.html">Home</a>
+<a class="text-on-surface hover:text-secondary transition-colors" href="about.html">About</a>
+<a class="text-on-surface hover:text-secondary transition-colors" href="services.html">Services</a>
+<a class="text-secondary font-bold" href="products.html">Products</a>
+<a class="text-on-surface hover:text-secondary transition-colors" href="consulting.html">Consulting</a>
+<a class="text-on-surface hover:text-secondary transition-colors" href="contact.html">Contact</a>
+<a class="mt-4 bg-tertiary text-on-tertiary-fixed px-6 py-3 rounded-lg text-base font-semibold" href="consulting.html">Book a Consultation</a>
+</div>
 <main class="pt-32">
 <!-- Hero Section -->
 <section class="relative px-margin-mobile md:px-gutter max-w-container-max mx-auto text-center mb-section-padding overflow-hidden">

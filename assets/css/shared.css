@@ -109,6 +109,16 @@ body {
 }
 .animate-float { animation: float 6s ease-in-out infinite; }
 
+/* ---- Mobile spacing overrides ---- */
+@media (max-width: 767px) {
+  .py-section-padding { padding-top: 48px !important; padding-bottom: 48px !important; }
+  .pb-section-padding { padding-bottom: 48px !important; }
+  .pt-section-padding { padding-top: 48px !important; }
+  .mb-section-padding { margin-bottom: 48px !important; }
+  .mt-section-padding { margin-top: 48px !important; }
+  .px-gutter { padding-left: 20px !important; padding-right: 20px !important; }
+}
+
 /* ---- Hero slide-up fade (borrowed concept) ---- */
 @keyframes fade-up {
   from { opacity: 0; transform: translateY(15px); }

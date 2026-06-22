@@ -63,15 +63,14 @@
     let open = false;
     function setOpen(state) {
       open = state;
-      menu.classList.toggle('opacity-0', !open);
-      menu.classList.toggle('pointer-events-none', !open);
-      menu.classList.toggle('opacity-100', open);
-      menu.classList.toggle('pointer-events-auto', open);
-      bars[0].classList.toggle('rotate-45', open);
-      bars[0].classList.toggle('translate-y-[7px]', open);
-      bars[1].classList.toggle('opacity-0', open);
-      bars[2].classList.toggle('-rotate-45', open);
-      bars[2].classList.toggle('-translate-y-[7px]', open);
+      menu.style.opacity = open ? '1' : '0';
+      menu.style.pointerEvents = open ? 'auto' : 'none';
+      if (bars.length >= 3) {
+        bars[0].style.transform = open ? 'rotate(45deg) translateY(7px)' : '';
+        bars[1].style.opacity = open ? '0' : '';
+        bars[2].style.transform = open ? 'rotate(-45deg) translateY(-7px)' : '';
+      }
+      document.body.style.overflow = open ? 'hidden' : '';
     }
     burger.addEventListener('click', function () { setOpen(!open); });
     menu.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { setOpen(false); }); });

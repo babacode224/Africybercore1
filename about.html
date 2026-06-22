@@ -23,9 +23,25 @@
 <a class="text-on-surface-variant font-medium hover:text-secondary transition-colors duration-300" href="consulting.html">Consulting</a>
 <a class="text-on-surface-variant font-medium hover:text-secondary transition-colors duration-300" href="contact.html">Contact</a>
 </div>
-<a class="bg-tertiary text-on-tertiary-fixed font-button-text text-button-text px-6 py-3 rounded-lg hover:bg-tertiary/90 transition-all active:scale-95" href="consulting.html">Book a Consultation</a>
+<div class="flex items-center gap-3">
+<a class="hidden sm:inline-flex bg-tertiary text-on-tertiary-fixed font-button-text text-button-text px-6 py-3 rounded-lg hover:bg-tertiary/90 transition-all active:scale-95" href="consulting.html">Book a Consultation</a>
+<button id="acc-hamburger" type="button" aria-label="Open menu" class="md:hidden flex flex-col justify-center items-center gap-[5px] w-9 h-9">
+<span class="block w-5 h-[2px] bg-on-surface transition-all duration-300 origin-center"></span>
+<span class="block w-5 h-[2px] bg-on-surface transition-all duration-300 origin-center"></span>
+<span class="block w-5 h-[2px] bg-on-surface transition-all duration-300 origin-center"></span>
+</button>
+</div>
 </nav>
 </header>
+<div id="acc-mobile-menu" class="md:hidden fixed inset-0 z-[45] bg-background/95 backdrop-blur-sm flex flex-col items-center justify-center gap-6 text-2xl opacity-0 pointer-events-none transition-opacity duration-300">
+<a class="text-on-surface hover:text-secondary transition-colors" href="index.html">Home</a>
+<a class="text-secondary font-bold" href="about.html">About</a>
+<a class="text-on-surface hover:text-secondary transition-colors" href="services.html">Services</a>
+<a class="text-on-surface hover:text-secondary transition-colors" href="products.html">Products</a>
+<a class="text-on-surface hover:text-secondary transition-colors" href="consulting.html">Consulting</a>
+<a class="text-on-surface hover:text-secondary transition-colors" href="contact.html">Contact</a>
+<a class="mt-4 bg-tertiary text-on-tertiary-fixed px-6 py-3 rounded-lg text-base font-semibold" href="consulting.html">Book a Consultation</a>
+</div>
 <!-- Hero Section: Mission & Vision -->
 <header class="relative pt-section-padding pb-section-padding overflow-hidden">
 <div class="cyber-grid absolute inset-0"></div>
@@ -34,7 +50,7 @@
 <h1 class="font-display-lg text-headline-lg-mobile md:text-[80px] text-white max-w-4xl mx-auto mb-stack-lg leading-tight">
                 Iron-Clad Innovation for the <span class="text-secondary">Silicon Savannah</span>
 </h1>
-<div class="grid md:grid-cols-2 gap-gutter mt-20">
+<div class="grid md:grid-cols-2 gap-gutter mt-10 md:mt-20">
 <div class="glass-card p-10 rounded-xl text-left border-l-4 border-l-tertiary">
 <h2 class="font-headline-md text-headline-md text-tertiary mb-stack-md">Mission</h2>
 <p class="font-body-lg text-body-lg text-on-surface-variant">
@@ -53,11 +69,11 @@
 <!-- Who We Are Section -->
 <section class="py-section-padding bg-surface-container-lowest">
 <div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter">
-<div class="flex flex-col md:flex-row gap-20 items-center">
+<div class="flex flex-col md:flex-row gap-10 md:gap-20 items-center">
 <div class="w-full md:w-1/2 relative">
 <div class="absolute -top-4 -left-4 w-24 h-24 border-t-2 border-l-2 border-secondary"></div>
 <div class="absolute -bottom-4 -right-4 w-24 h-24 border-b-2 border-r-2 border-tertiary"></div>
-<div class="bg-surface-card rounded-lg overflow-hidden h-[500px]">
+<div class="bg-surface-card rounded-lg overflow-hidden h-[300px] sm:h-[400px] md:h-[500px]">
 <img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" alt="Diverse African tech specialists in a high-tech control center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnXFu9PcGxgr5lEmECA2UpYntaWXl5RjAKJJtt4zK2LLVsOR1GtBxfFQWDnys10U9PMazWlG2vKxnXJSl1OScNH3VxpB8wFS2wo-gbv9GB6zuIoDSPDu8wNaQH3O4ENXLdy3v0DZb3Vzsdnt-i5b3-PXupWgXR0fJyj5OyjGSxvRg2aZvzlOMAm2X7zdw7z5ukSXrQl-hm_LA85nFWq45O7KdV2rXah4gN4qeq3qVoJoRVvS95eKodRJCJ51OzKmJ8moxFRedeD2o"/>
 </div>
 </div>
@@ -82,7 +98,7 @@
 <!-- Our Approach (3-step visual) -->
 <section class="py-section-padding relative">
 <div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter">
-<div class="text-center mb-24">
+<div class="text-center mb-12 md:mb-24">
 <span class="font-label-caps text-label-caps text-secondary mb-stack-md block">METHODOLOGY</span>
 <h2 class="font-headline-lg text-headline-lg text-white">Our Strategic Triad</h2>
 </div>
@@ -126,7 +142,7 @@
 <!-- Why AfriCyberCore (Differentiators) -->
 <section class="py-section-padding bg-primary-container">
 <div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter">
-<div class="grid md:grid-cols-2 gap-20">
+<div class="grid md:grid-cols-2 gap-10 md:gap-20">
 <div>
 <h2 class="font-headline-lg text-headline-lg text-white mb-stack-lg">Why AfriCyberCore?</h2>
 <p class="font-body-lg text-body-lg text-on-surface-variant mb-12">
@@ -190,7 +206,7 @@
 <!-- Meet Our Team section -->
 <section class="py-section-padding bg-background">
 <div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter">
-<div class="text-center mb-24">
+<div class="text-center mb-12 md:mb-24">
 <span class="font-label-caps text-label-caps text-secondary mb-stack-md block">THE BRAIN TRUST</span>
 <h2 class="font-headline-lg text-headline-lg text-white">Meet the Innovators</h2>
 </div>

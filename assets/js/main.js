@@ -1,5 +1,5 @@
 /* AfriCyberCore — shared interactions */
-document.addEventListener('DOMContentLoaded', () => {
+function accInit() {
   // Reveal-on-scroll for elements that opt in with .reveal-on-scroll
   const revealEls = document.querySelectorAll('.reveal-on-scroll');
   if (revealEls.length) {
@@ -31,4 +31,27 @@ document.addEventListener('DOMContentLoaded', () => {
     btn.addEventListener('mouseup', () => { btn.style.transform = ''; });
     btn.addEventListener('mouseleave', () => { btn.style.transform = ''; });
   });
-});
+
+  // Mobile hamburger menu
+  const burger = document.getElementById('acc-hamburger');
+  const mobileMenu = document.getElementById('acc-mobile-menu');
+  if (burger && mobileMenu) {
+    const bars = burger.querySelectorAll('span');
+    let open = false;
+    function toggle(state) {
+      open = state;
+      mobileMenu.style.opacity = open ? '1' : '0';
+      mobileMenu.style.pointerEvents = open ? 'auto' : 'none';
+      if (bars.length >= 3) {
+        bars[0].style.transform = open ? 'rotate(45deg) translateY(7px)' : '';
+        bars[1].style.opacity = open ? '0' : '';
+        bars[2].style.transform = open ? 'rotate(-45deg) translateY(-7px)' : '';
+      }
+      document.body.style.overflow = open ? 'hidden' : '';
+    }
+    burger.addEventListener('click', () => toggle(!open));
+    mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => toggle(false)));
+  }
+}
+if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', accInit);
+else accInit();
