@@ -364,8 +364,7 @@
       '<div class="grid grid-cols-2 md:grid-cols-4 gap-8 pt-10">' +
         '<div class="col-span-2 md:col-span-1">' +
           '<div class="flex items-center gap-2 mb-3">' +
-            '<img src="assets/img/africyberlogo.png" alt="AfriCyberCore" class="w-9 h-9 rounded-full object-cover border border-white/15 shrink-0"/>' +
-            '<span class="text-white font-bold text-lg tracking-tight" style="font-family:\'Hanken Grotesk\',sans-serif;">AfriCyberCore</span>' +
+            '<img src="assets/img/afrilogo.png" alt="AfriCyberCore" class="h-8 w-auto invert shrink-0" style="max-width:none"/>' +
           '</div>' +
           '<p class="text-white/45 text-sm max-w-xs leading-relaxed">Iron-Clad Innovation for the Silicon Savannah. Lagos, Nigeria.</p>' +
         '</div>' +
